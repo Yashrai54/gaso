@@ -1,0 +1,485 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "BBH Bogle";
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body{
+    margin: 10px;
+}
+.list-container{
+    display: flex;
+    gap: 20px;
+    color:crimson;
+    margin: 20px;
+}
+
+.list{
+    list-style:none;
+    display: flex;
+    gap:30px;
+    font-size: 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.header-container{
+    color:white;
+    margin: 30px;
+    opacity:0
+}
+
+.navbar{
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box{
+    height:300px;
+    width: 300px;
+    background-color: black;
+}
+.box2{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+}
+.box3{
+    height: 300px;
+    width: 300px;
+    background-color: chocolate;
+}
+.page1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color:cadetblue;
+}
+.page2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+}
+.page3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.container{
+    margin: 30px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin: 10px;
+}
+
+main img {
+    margin: 30px;
+    width: 30%;
+    height: 30%;
+    border: 4px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    
+}
+
+button{
+    padding: 15px 30px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    color: crimson;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    color: white;
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+
+    gap: 10px;
+    padding: 10px 20px;
+    border: 4px solid crimson;
+    font-size: 18px;
+}
+
+/* image inside the slide */
+.swiper-slide img {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin: 20px;
+    border-color: crimson;
+}
+
+/* text block next to the image: paragraphs stack top to bottom */
+.ronin {
+    flex: 1;
+    min-width: 0;                /* lets text wrap instead of running off to the right */
+    display: flex;
+    flex-direction: column;      /* first paragraph on top, second below */
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px 10px 0;
+    max-height: 85vh;            /* safety: scrolls only if it truly doesn't fit */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: crimson #222;
+}
+
+.ronin p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #e8e8f4;
+}
+
+.ronin p::first-letter {
+    float: left;
+    margin: 4px 10px 0 0;
+    font-size: 3.4rem;
+    line-height: 0.85;
+    font-weight: bold;
+    color: crimson;
+}
+
+.ronin p::first-line {
+    color: white;
+    font-weight: bold;
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.people-grid div {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    background: #151515;
+}
+.gaso{
+    color:white;
+    
+}
+.gaso-para{
+    width: 650px;
+    max-width: 100%;             /* never wider than its container */
+}
+
+/* second paragraph wrapper: just a normal block under the first paragraph */
+.person {
+    display: block;              /* was column + flex-wrap + height:500px, which pushed text to the right */
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.person .person-square {
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    background: #222;
+    border: 4px solid crimson;
+    border-radius: 15px;
+}
+
+.person-name {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e8e8f4;
+    text-align: justify;
+}
+
+.swiper-slide {
+    width:95vw !important;     /* % was resolving against a wrapper wider than the screen */
+    max-width: 95vw;
+    flex-shrink: 0;
+}
+
+.ronin {
+    min-width: 0;
+}
+
+.ronin p,
+.person-name {
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   (make sure your HTML <head> has:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">)
+   ========================================================= */
+
+/* ---------- Tablets (<= 900px) ---------- */
+@media (max-width: 900px) {
+    .list {
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    .header-container {
+        margin: 20px;
+    }
+
+    .box,
+    .box2,
+    .box3 {
+        width: 220px;
+        height: 220px;
+    }
+
+    main img {
+        margin: 15px;
+        width: 40%;
+    }
+
+    .swiper-slide img {
+        width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+
+    .people-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .gaso-para {
+        width: 100%;
+    }
+}
+
+/* ---------- Phones (<= 600px) ---------- */
+@media (max-width: 600px) {
+
+    /* Allow vertical scrolling on small screens, otherwise content gets cut off */
+    html,
+    body {
+        overflow-y: auto;
+        height: auto;
+        min-height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 8px;
+    }
+
+    /* ----- Navbar ----- */
+    .navbar {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .list-container {
+        margin: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .list {
+        flex-wrap: wrap;
+        gap: 12px 16px;
+        font-size: 16px;
+    }
+
+    .header-container {
+        margin: 10px;
+    }
+
+    /* ----- Pages: let height follow content instead of locking to 100% ----- */
+    .page1,
+    .page2,
+    .page3 {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .page1 {
+        margin-top: 20px;
+    }
+
+    .container {
+        margin: 15px;
+    }
+
+    /* ----- Main: stack vertically ----- */
+    main {
+        flex-direction: column;
+        gap: 15px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    main img {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
+        border-width: 3px;
+        border-radius: 15px;
+    }
+
+    /* ----- Boxes ----- */
+    .box,
+    .box2,
+    .box3 {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+
+    /* ----- Buttons ----- */
+    button {
+        padding: 12px 22px;
+        font-size: 16px;
+        margin: 6px;
+        border-width: 3px;
+        border-radius: 15px;
+    }
+
+    /* ----- Swiper slides: image on top, text below ----- */
+    .swiper-slide {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 94vw !important;
+        max-width: 94vw;
+        padding: 12px;
+        gap: 10px;
+        font-size: 16px;
+        border-width: 3px;
+        border-radius: 12px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 8px auto;
+    }
+
+    .ronin {
+        flex: none;
+        width: 100%;
+        padding: 5px 5px 10px 5px;
+        gap: 14px;
+        max-height: 55vh;
+        max-height: 55dvh;
+    }
+
+    .ronin p,
+    .person-name {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;        /* justified text creates big gaps on narrow screens */
+    }
+
+    .ronin p::first-letter {
+        font-size: 2.6rem;
+        margin: 3px 8px 0 0;
+    }
+
+    /* ----- People grid: 2 columns ----- */
+    .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .people-grid div {
+        min-height: 80px;
+        font-size: 15px;
+    }
+
+    .gaso-para {
+        width: 100%;
+    }
+
+    .person .person-square {
+        border-width: 3px;
+        border-radius: 12px;
+    }
+}
+
+/* ---------- Very small phones (<= 380px) ---------- */
+@media (max-width: 380px) {
+    .list {
+        font-size: 14px;
+        gap: 10px 12px;
+    }
+
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ronin p,
+    .person-name {
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+        margin: 6px 0;
+    }
+}
